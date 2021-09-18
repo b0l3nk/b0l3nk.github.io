@@ -1,0 +1,65 @@
+body{
+    background-color: black;
+    background-position-x: 324px;
+    background-position-y: 100px;
+}
+html {
+	min-height: 100%;
+	overflow-x: hidden
+}
+#circlecnv{
+    z-index: -1;
+    padding: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+}
+.topBar{
+    position: relative;
+    padding: 0;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+    color: white;
+}
+#topcnv{
+    z-index: -1;
+    position: absolute;
+    z-index: -1;
+    padding: 0;
+    display: block;
+    top: 0;
+    left: 0;
+    margin:auto;
+    opacity: .65;
+}
+.visualizer{
+    width: 344px;
+    height: 100px;
+    padding: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    margin:auto;
+}
+/*.border{
+    border-style: dotted;
+    background-color: green;
+    border-bottom: 50px;
+    border-color: black;
+    width: 344px;
+    height: 60px;
+    bottom: 400px;
+    position: absolute;
+    margin:auto;
+  
+}*/
