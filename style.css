@@ -1,0 +1,31 @@
+fieldset {
+  border: solid 1px #ccc;
+}
+fieldset label {
+  display: block;
+  margin: 5px 0px;
+}
+
+fieldset input#nama,
+fieldset input#kode_voucher {
+  width: 220px;
+  height: 33px;
+  border: 1px solid #ddd;
+  margin: 5px 0px;
+  padding: 0px 5px;
+
+}
+
+#btn_submit {
+  background-color: #fb743e;
+  color: white;
+  border-radius: 3px;
+  opacity: 0.8;
+  padding: 10px 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+#btn_submit:hover {
+  opacity: 1;
+}
