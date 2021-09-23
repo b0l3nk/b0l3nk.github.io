@@ -6,7 +6,8 @@
 }
 body{
     height: 100vh;
-    background-image: url(https://bit.ly/2FPT1J9);
+    /*background-image: url(https://bit.ly/2FPT1J9);*/
+    background-image: url('back.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
