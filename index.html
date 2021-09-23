@@ -1,23 +1,52 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Halaman Login</title>
-        <link rel="stylesheet" href="styles.css">
-        <script src='https://www.google.com/recaptcha/api.js'></script>
-    </head>
-   
-    <body>
-        <div class="container">
-          <h1>Login</h1>
-            <form>
-                <label>Username</label><br>
-                <input type="text"><br>
-                <label>Password</label><br>
-                <input type="password"><br>
-                <div class="g-recaptcha" data-sitekey="6LeOJYYcAAAAALuhNx7m7uuoKc2qIQ-fWBPIp6gA"></div><br>
-                <form action="?" method="POST"><br>
-                <button>Log in</button>
-            </form>
-        </div>     
-    </body>
+<head>
+  <meta charset="utf-8">
+  <title>Menggunakan google recaptcha v3</title>
+  <link href="style.css" rel="stylesheet">
+  <script src="https://www.google.com/recaptcha/api.js?render=6LeOJYYcAAAAALuhNx7m7uuoKc2qIQ-fWBPIp6gA"></script>
+</head>
+<body>
+  <h1>Menggunakan Google reCaptcha V3</h1>
+  <p>
+    <form method="post" action="recaptcha_act.php">
+      <fieldset>
+        <p>
+          <label for="nama">Nama :</label>
+          <input type="text" name="nama" id="nama" maxlength="60">
+        </p>
+        <p>
+          <label for="kode_voucher">Kode voucher :</label>
+          <input type="text" name="kode_voucher" id="kode_voucher" maxlength="20">
+          <input type="hidden" id="token" name="token">
+        </p>
+        <p>
+          <input type="submit" name="generate" id="btn_submit" value="Kirim">
+        </p>
+      </fieldset>
+    </form>
+  </p>
+  <p>
+    <script>
+      grecaptcha.ready(function() {
+        grecaptcha.execute('6LcvyWEaAAAAACvV1LeBu', {
+          action: 'homepage'
+        }).then(function(token) {
+          console.log("onload's token : "+token);
+          document.getElementById("token").value = token;
+        });
+      });
+      /*refresh get token before it's expire every 90 Seconds */
+      setInterval(function () {
+        grecaptcha.ready(function () {
+          grecaptcha.execute("6LcvyWEaAAAAACvV1LeBu", {
+            action: "request_call_back"
+          }).then(function (token) {
+            console.log("refresh toekn : "+token);
+            document.getElementById("token").value = token;
+          });
+        });
+      }, 90 * 1000);
+    </script>
+  </body>
 </html>
