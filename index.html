@@ -1,33 +1,23 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head>
-    <link rel="stylesheet" href="styles.css"></link>
-</head>
-<body onload="initialize()">
-    <canvas id="circlecnv"></canvas>
-    <div id="UI" onmouseover="mouseOverUI()" > <!--</div>onmouseout="myTime = setTimeout(mouseOutUI, 3000)">-->
-        <canvas id="topcnv"></canvas>
-        <div class="topBar">
-            <audio src="fast-live.mp3" autoplay="hidden" id="audio"></audio>
-            <!--<audio controls id="audio"></audio>
-            <input id="audioFile" type="file" accept="Audio/*" capture/>--> 
-            <!--
-            <img id="volIcon" src="VolumeSliderIcon.png" width="25" height="25">
-            <input id="volumeSlider" type="range" min="0" max="100" value="30" onchange="changeVolume()">
-            -->
-            <!--<select id="colorSelect" onchange="changeColor()">
-                <option value="0">Color Spectrum</option>
-                <option value="1">Red</option>
-                <option value="2">Orange</option>
-                <option value="3">Yellow</option>
-                <option value="4">Green</option>
-                <option value="5">Blue</option>
-                <option value="6">Purple</option>
-            </select>-->
-        </div>
-    </div>
-    <p>awasome<!--<img class="logo" src="VolumeSliderIcon.png">--></p><border class="border">
-    <canvas class="visualizer" id="cnv1" width="1024" height="350"></canvas></border>
-    <script src="script.js"></script>
-</body>
+    <head>
+        <title>Halaman Login</title>
+        <link rel="stylesheet" href="style.css">
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+    </head>
+   
+    <body>
+        <div class="container">
+          <h1>Login</h1>
+            <form>
+                <label>Username</label><br>
+                <input type="text"><br>
+                <label>Password</label><br>
+                <input type="password"><br>
+                <div class="g-recaptcha" data-sitekey="6LdSGokUAAAAAIw0h7cITOzYDuW66gF9gUrpuZZT"></div><br>
+                <form action="?" method="POST"><br>
+                <button>Log in</button>
+            </form>
+        </div>     
+    </body>
 </html>
